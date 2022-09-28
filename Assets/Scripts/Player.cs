@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {
-
-    private float horizontal;
-    private bool isGrounded;
     public float speed;
+
     public float jumpForce;
 
+    public GameObject bulletPrefab;
+
     private Rigidbody2D rigidBody2D;
+
+    private float horizontal;
+
+    private bool isGrounded;
+
     private Animator animator;
+
     private Vector2 initialPosition;
+
+    private float lastShoot;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,36 +35,36 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal") * speed; //Esto detecta si presionamos las teclas para mover al personaje.
-        if(horizontal < 0.0f)
+        horizontal = Input.GetAxis("Horizontal") * speed;
+        if (horizontal < 0.0f)
         {
-            transform.localScale = new Vector2(-1.0f, 1.0f); 
+            transform.localScale = new Vector2(-1.0f, 1.0f);
         }
-        else if(horizontal > 0.0f)
+        else if (horizontal > 0.0f)
         {
-            transform.localScale = new Vector2(1.0f, 1.0f); 
-
+            transform.localScale = new Vector2(1.0f, 1.0f);
         }
-
         animator.SetBool("isRunning", horizontal != 0.0f);
 
-        Debug.DrawRay(transform.position, Vector2.down * 1.1f, Color.blue);
-        if(Physics2D.Raycast(transform.position, Vector2.down, 1.1f))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            isGrounded = true;
-            animator.SetBool("isJumping", false);
-        }
-        else
-        {
-            isGrounded = false;
-        }
-
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
             Jump();
         }
 
-        DeathOnFall();
+        if (!isGrounded)
+        {
+            animator.SetBool("isJumping", true);
+        }else{
+            animator.SetBool("isJumping", false);
+        }
 
+        if(Input.GetKeyDown(KeyCode.E) && Time.time > lastShoot + 1f){
+            Shoot();
+            lastShoot = Time.time;
+
+        }
+
+        DeathOnFall();
     }
 
     public void Death()
@@ -64,20 +74,37 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        animator.SetBool("isJumping", true);
         rigidBody2D.AddForce(Vector2.up * jumpForce);
     }
 
     private void DeathOnFall()
     {
-        if(transform.position.y < -10f)
+        if (transform.position.y < -10f)
         {
-            //transform.position = initialPosition;
             Death();
         }
     }
 
-    private void FixedUpdate(){
-        GetComponent<Rigidbody2D>().velocity = new Vector2(horizontal, rigidBody2D.velocity.y);
+    private void Shoot(){
+        Vector3 direction;
+        if(transform.localScale.x > 0) direction = Vector3.right;
+        else direction = Vector3.left;
+
+        GameObject bullet = Instantiate(bulletPrefab, transform.position + direction * 0.8f, Quaternion.identity);
+        bullet.GetComponent<Bullet>().SetDirection(direction);
+
+    }
+
+    private void FixedUpdate()
+    {
+        rigidBody2D.velocity = new Vector2(horizontal, rigidBody2D.velocity.y);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider) {
+        if(collider.name == "Tilemap") isGrounded = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collider) {
+        if(collider.name == "Tilemap") isGrounded = false;
     }
 }

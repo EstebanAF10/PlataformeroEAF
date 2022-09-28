@@ -2807,27 +2807,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_146
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 584
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef7d0905133734ed3bb1174f55c305d6
-      internalID: -459744851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Tiles_147
       rect:
         serializedVersion: 2
@@ -3416,7 +3395,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_175
+      name: LeftSidePlatform2
       rect:
         serializedVersion: 2
         x: 8
@@ -3563,7 +3542,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_182
+      name: RightSidePlatform2
       rect:
         serializedVersion: 2
         x: 64
@@ -3794,7 +3773,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_193
+      name: LeftSidePlatform1
       rect:
         serializedVersion: 2
         x: 8
@@ -3941,7 +3920,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_200
+      name: RightSidePlatform1
       rect:
         serializedVersion: 2
         x: 64
@@ -14066,8 +14045,8 @@ TextureImporter:
       name: Tiles_716
       rect:
         serializedVersion: 2
-        x: 64
-        y: 304
+        x: 75
+        y: 240
         width: 8
         height: 8
       alignment: 0
@@ -27544,6 +27523,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bullet
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 587
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206b90295d639429c8ed9fe67fe19097
+      internalID: -459744851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -27572,7 +27572,7 @@ TextureImporter:
       Tiles_362: 1312470491
       Tiles_1263: -713974979
       Tiles_84: -1015074263
-      Tiles_1311: 2142346559
+      Tiles_235: -1389235393
       Tiles_678: 1507096023
       Tiles_778: -1184489024
       Tiles_596: -2024696521
@@ -27835,6 +27835,7 @@ TextureImporter:
       Tiles_411: -824755
       Tiles_900: -1577013169
       Tiles_250: -2057781802
+      LeftSidePlatform2: -1106598896
       Tiles_103: 1013711397
       Tiles_124: 1048027828
       Tiles_233: -484641312
@@ -27914,6 +27915,7 @@ TextureImporter:
       Tiles_294: 676251163
       Tiles_906: -1374441893
       Tiles_409: -1265131944
+      RightSidePlatform1: -1266414872
       Tiles_941: -308875123
       Tiles_667: -713972649
       Tiles_273: -86732857
@@ -27950,6 +27952,7 @@ TextureImporter:
       Tiles_1314: 751893784
       Tiles_640: -914881966
       Tiles_760: 1012837471
+      Bullet: -459744851
       Tiles_1299: -1575177104
       Tiles_1240: 771258207
       Tiles_293: -860813328
@@ -28261,7 +28264,7 @@ TextureImporter:
       Tiles_1309: -433801578
       Tiles_454: 2141751167
       Tiles_46: 1186973548
-      Tiles_146: -459744851
+      LeftSidePlatform1: -2036296923
       Tiles_928: -404265799
       Tiles_417: -753160071
       Tiles_1239: 2110182208
@@ -28283,7 +28286,6 @@ TextureImporter:
       Tiles_1088: -591636057
       Tiles_1290: -1444420591
       Tiles_1216: -144129716
-      Tiles_193: -2036296923
       Tiles_141: -438803642
       Tiles_214: 1456164486
       Tiles_1025: 1902246542
@@ -28499,7 +28501,6 @@ TextureImporter:
       Tiles_546: -1837968752
       Tiles_771: 662537163
       Tiles_1007: 1240993976
-      Tiles_175: -1106598896
       Tiles_931: 975739319
       Tiles_1098: -1638378380
       Tiles_889: 1956407318
@@ -28651,7 +28652,6 @@ TextureImporter:
       Tiles_76: 474870405
       Tiles_1316: 346455845
       Tiles_1106: 1364256428
-      Tiles_182: 1143977299
       Tiles_511: -272004175
       Tiles_961: -1502624099
       Tiles_19: -1603173413
@@ -28730,10 +28730,9 @@ TextureImporter:
       Tiles_297: -1536899283
       Tiles_434: -488967926
       Tiles_218: 974221929
-      Tiles_200: -1266414872
+      Tiles_659: 776248752
       Tiles_513: 672931782
       Tiles_868: -1609805750
-      Tiles_659: 776248752
       Tiles_903: 1090743476
       Tiles_122: -461381385
       Tiles_1329: -941319804
@@ -28845,6 +28844,7 @@ TextureImporter:
       Tiles_278: -1433414582
       Tiles_43: -1359262938
       Tiles_1244: 1014153363
+      RightSidePlatform2: 1143977299
       Tiles_390: 1622771297
       Tiles_199: -112985939
       Tiles_590: -1099809401
@@ -28912,7 +28912,7 @@ TextureImporter:
       Tiles_243: -732263783
       Tiles_1097: -1693049526
       Tiles_328: -722980325
-      Tiles_235: -1389235393
+      Tiles_1311: 2142346559
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
