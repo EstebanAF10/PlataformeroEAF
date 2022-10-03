@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
         Player player = collision.gameObject.GetComponent<Player>();
         if(player != null){
         Debug.Log("collision");
-        player.Death();
+        player.Hit();
         }
     }
 }
