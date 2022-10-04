@@ -5,6 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public bool indestructable = false;
+
+    public float life = 1;
+    public float knockback = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +21,20 @@ public class Enemy : MonoBehaviour
     }
 
     public void Hit(){
-        if(!indestructable){
+
+        life -= 1;
+
+        if(!indestructable && life <= 0)
+        {
         Destroy(gameObject);
         }
     }
 
-    protected void OnCollisionEnter2D(Collision2D collision){
-        Player player = collision.gameObject.GetComponent<Player>();
+    protected void OnTriggerEnter2D(Collider2D collider){
+        Player player = collider.GetComponent<Player>();
         if(player != null){
-        Debug.Log("collision");
-        player.Hit();
+            
+            player.Hit(knockback, gameObject);
         }
     }
 }

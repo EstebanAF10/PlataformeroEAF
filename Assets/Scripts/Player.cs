@@ -14,13 +14,18 @@ public class Player : MonoBehaviour
     public GameObject bulletPrefab;
 
     public GameObject lifesPanel;
+
     public Vector2 respawnpoint;
+
+    public float cooldownTime = 1f;
 
     private Rigidbody2D rigidBody2D;
 
-    private float horizontal;
+    public float horizontal;
 
     private bool isGrounded;
+
+    private bool isInCooldown;
 
     private Animator animator;
 
@@ -95,17 +100,33 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Hit()
+    public void Hit(float knockback, GameObject enemy)
     {
+        if(!isInCooldown){
         if (life > 0)
         {
             lifesPanel.transform.GetChild(life).gameObject.SetActive(false);
             life -= 1;
+            if(enemy)
+            {
+                Vector2 difference = (transform.position - enemy.transform.position).normalized;
+                Vector2 force = difference * knockback;
+                rigidBody2D.AddForce(force * knockback, ForceMode2D.Impulse);
+            }
+
         }
         else
         {
             Death();
         }
+        }
+    }
+
+    IEnumerator cooldown()
+    {
+        isInCooldown = true;
+        yield return new WaitForSeconds(cooldownTime);
+        isInCooldown = false;
     }
 
     private void Jump()
@@ -118,7 +139,7 @@ public class Player : MonoBehaviour
         if (transform.position.y < -10f)
         {
             transform.position = respawnpoint;
-            Hit();
+            Hit(0, null);
         }
     }
 

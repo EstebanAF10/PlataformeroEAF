@@ -4,38 +4,26 @@ using UnityEngine;
 
 public class MovingEnemy : Enemy //Que herede de enemy y no de MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 2f;
     public float direction = 1f;
     public float directionTimeChange = 3f;
     private Rigidbody2D rigidBody2D;
 
-    private GameObject  footR;
-    private GameObject  footL;
+    private GameObject wallL;
+    private GameObject wallR;
     // Start is called before the first frame update
     void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
         //StartCoroutine(DirectionChange());
-        footR = transform.Find("FootR").gameObject;
-        footL = transform.Find("FootL").gameObject;
+        wallR = transform.parent.Find("WallR").gameObject;
+        wallL = transform.parent.Find("WallL").gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(footR.transform.position, Vector2.down, Color.blue);
-        Debug.DrawRay(footL.transform.position, Vector2.down, Color.blue);
-
-        if(!Physics2D.Raycast(footR.transform.position, Vector2.down, 0.5f))
-        {
-            direction = -1; //Gira a izquierda
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-        }
-        if(!Physics2D.Raycast(footR.transform.position, Vector2.down, 0.5f))
-        {
-            direction = 1; //Gira a derecha
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-        }
+       
     }
     
      public void Hit(){
@@ -44,15 +32,30 @@ public class MovingEnemy : Enemy //Que herede de enemy y no de MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidBody2D.velocity = new Vector2(direction, rigidBody2D.velocity.y);
+        rigidBody2D.velocity = new Vector2(direction * speed, rigidBody2D.velocity.y);
     }
 
-    IEnumerator DirectionChange()
+    // IEnumerator DirectionChange() //Funcionalidad de cambiar la direccion del enemigo con el tiempo. 
+    // {
+    //     while(true)
+    //     {
+    //     yield return new WaitForSeconds(directionTimeChange);
+    //     Turn();
+    //     }
+    // }
+
+      private new void OnTriggerEnter2D(Collider2D collider)
     {
-        while(true){
-        yield return new WaitForSeconds(directionTimeChange);
+        base.OnTriggerEnter2D(collider); //base hace referencia a la clase padre que es Enemy. Se ejecuta primero lo que está en el padre y luego el resto del código
+        if(collider.gameObject == wallL || collider.gameObject == wallR)
+        {
+            Turn();
+        }
+    }
+
+    private void Turn()
+    {
         direction = direction * -1;
         transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-        }
     }
 }
