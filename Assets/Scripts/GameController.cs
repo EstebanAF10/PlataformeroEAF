@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour
 
     public GameObject[] checkPoints;
 
+    public bool isFinal;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,11 @@ public class GameController : MonoBehaviour
     {
         if (winCollider.IsTouching(playerCollider))
         {
-            SceneManager.LoadScene("Level" + (level + 1));
+            if(isFinal){
+                SceneManager.LoadScene("Win"); //Para cargar la escena del ultimo nivel
+            }else{
+                SceneManager.LoadScene("Level" + (level + 1));
+            }
         }
         foreach (var checkpoint in checkPoints)
         {

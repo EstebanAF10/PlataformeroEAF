@@ -6944,7 +6944,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_364
+      name: WarpTile
       rect:
         serializedVersion: 2
         x: 72
@@ -27469,7 +27469,7 @@ TextureImporter:
         width: 3
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -27509,7 +27509,7 @@ TextureImporter:
       Tiles_362: 1312470491
       Tiles_1263: -713974979
       Tiles_84: -1015074263
-      Tiles_1311: 2142346559
+      Tiles_235: -1389235393
       Tiles_678: 1507096023
       Tiles_778: -1184489024
       Tiles_596: -2024696521
@@ -27932,7 +27932,6 @@ TextureImporter:
       Tiles_750: 26825159
       Tiles_252: 1049335061
       Tiles_62: -1027120085
-      Tiles_364: -1436897747
       Tiles_841: 887060568
       Tiles_1132: -1182360802
       Tiles_504: 444384023
@@ -28446,6 +28445,7 @@ TextureImporter:
       Tiles_477: -1189579549
       Tiles_197: 639838913
       Tiles_721: -757205654
+      WarpTile: -1436897747
       Tiles_525: -1195828214
       Tiles_1093: -107968934
       Tiles_247: -80577882
@@ -28850,7 +28850,7 @@ TextureImporter:
       Tiles_243: -732263783
       Tiles_1097: -1693049526
       Tiles_328: -722980325
-      Tiles_235: -1389235393
+      Tiles_1311: 2142346559
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
