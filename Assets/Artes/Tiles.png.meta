@@ -2492,7 +2492,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_131
+      name: aaaaaaa
       rect:
         serializedVersion: 2
         x: 72
@@ -3038,7 +3038,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_158
+      name: Sup_izq
       rect:
         serializedVersion: 2
         x: 8
@@ -3395,7 +3395,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeftSidePlatform2
+      name: izq
       rect:
         serializedVersion: 2
         x: 8
@@ -3773,7 +3773,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeftSidePlatform1
+      name: inf_izq
       rect:
         serializedVersion: 2
         x: 8
@@ -18935,7 +18935,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_949
+      name: null
       rect:
         serializedVersion: 2
         x: 32
@@ -27481,6 +27481,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Nada
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b8652b285b6d74ab85c2ea37ef60da
+      internalID: 243941515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -27771,7 +27792,6 @@ TextureImporter:
       Tiles_411: -824755
       Tiles_900: -1577013169
       Tiles_250: -2057781802
-      LeftSidePlatform2: -1106598896
       Tiles_103: 1013711397
       Tiles_124: 1048027828
       Tiles_233: -484641312
@@ -27821,6 +27841,8 @@ TextureImporter:
       Tiles_485: 36565292
       Tiles_483: -825122942
       Tiles_1180: 687898911
+      izq: -1106598896
+      inf_izq: -2036296923
       Tiles_427: 1523146908
       Tiles_896: -1987318607
       Tiles_208: -2039663724
@@ -27881,6 +27903,7 @@ TextureImporter:
       Tiles_268: -302775349
       Tiles_627: -905834043
       Tiles_790: 1825419312
+      aaaaaaa: 334888087
       Tiles_975: 482999063
       Tiles_170: 1296904530
       Tiles_1323: -648174178
@@ -27931,6 +27954,7 @@ TextureImporter:
       Tiles_512: 140551761
       Tiles_750: 26825159
       Tiles_252: 1049335061
+      Sup_izq: -1922422561
       Tiles_62: -1027120085
       Tiles_841: 887060568
       Tiles_1132: -1182360802
@@ -28097,7 +28121,6 @@ TextureImporter:
       Tiles_1143: 1162543291
       Tiles_813: -1346601993
       Tiles_1295: -524291766
-      Tiles_131: 334888087
       Tiles_10: 1720282950
       Tiles_296: -455572483
       Tiles_694: -546493216
@@ -28198,7 +28221,6 @@ TextureImporter:
       Tiles_1309: -433801578
       Tiles_454: 2141751167
       Tiles_46: 1186973548
-      LeftSidePlatform1: -2036296923
       Tiles_928: -404265799
       Tiles_417: -753160071
       Tiles_1239: 2110182208
@@ -28272,10 +28294,9 @@ TextureImporter:
       Tiles_279: -1632430490
       Tiles_983: 1866284666
       Tiles_1177: 876131899
-      Tiles_158: -1922422561
+      Tiles_1171: -1978651659
       Tiles_171: 882451299
       Tiles_749: -1554620284
-      Tiles_1171: -1978651659
       Tiles_1251: 2563845
       Tiles_479: -1437473142
       Tiles_607: -873591433
@@ -28503,6 +28524,7 @@ TextureImporter:
       Tiles_685: -1636258090
       Tiles_100: 1476635292
       Tiles_713: 1778343861
+      null: -165778184
       Tiles_1199: 1835575153
       Tiles_1310: -1517354278
       Tiles_761: -1399472841
@@ -28551,7 +28573,6 @@ TextureImporter:
       Tiles_849: 2035926666
       Tiles_1105: 1615530478
       Tiles_34: -489012611
-      Tiles_949: -165778184
       Tiles_1052: 1745046475
       Tiles_538: -1705461738
       Tiles_327: -354507792
@@ -28682,6 +28703,7 @@ TextureImporter:
       Tiles_757: -1469825012
       Tiles_132: -356899147
       Tiles_282: -698552699
+      Nada: 243941515
       Tiles_578: -510199907
       Tiles_686: -734003244
       Tiles_311: -1814228705
