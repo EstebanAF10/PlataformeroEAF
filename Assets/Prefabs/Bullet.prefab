@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -459744851, guid: 2f54bdd1b165f4c96be2c0a3ed2b3399, type: 3}
+  m_Sprite: {fileID: 846524159, guid: 2f54bdd1b165f4c96be2c0a3ed2b3399, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   friendBullet: 1
+  bulletTime: 0.5
 --- !u!61 &983307979014096132
 BoxCollider2D:
   m_ObjectHideFlags: 0
