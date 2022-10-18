@@ -16709,7 +16709,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_847
+      name: Flecha
       rect:
         serializedVersion: 2
         x: 64
@@ -23492,7 +23492,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_1174
+      name: Abajo
       rect:
         serializedVersion: 2
         x: 56
@@ -27618,6 +27618,7 @@ TextureImporter:
       Tiles_646: -694939654
       Tiles_1006: -635344318
       Tiles_1331: 147694480
+      Abajo: 291455218
       Tiles_185: 287697939
       Tiles_899: 1305417025
       Tiles_660: -473912307
@@ -27875,7 +27876,6 @@ TextureImporter:
       Tiles_1240: 771258207
       Tiles_293: -860813328
       Tiles_993: 2104030089
-      Tiles_1174: 825011713
       Tiles_67: 939204536
       Tiles_1256: -2062147969
       BrownTree2: 19851960
@@ -28361,9 +28361,9 @@ TextureImporter:
       Tiles_866: -1275500015
       Tiles_1283: 1352460681
       Tiles_618: 738164457
+      Flecha: 1184329343
       Tiles_414: -55015770
       Tiles_809: -255685913
-      Tiles_847: 2055797376
       Tiles_619: 253322514
       Tiles_605: -75939571
       Tiles_663: -238759187
