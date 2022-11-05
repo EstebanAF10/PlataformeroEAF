@@ -258,6 +258,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160960791}
   m_CullTransparentMesh: 1
+--- !u!114 &737762277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2366164508326258419, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+  m_PrefabInstance: {fileID: 926002860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1a0f74407344bd5896c2cf065ebfd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &840722576
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,6 +404,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840722576}
   m_CullTransparentMesh: 1
+--- !u!1001 &926002860
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183229188115427444, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715657770980188348, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
+      propertyPath: m_Name
+      value: Scripts
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c7c0b58f45cb0da42a67aacca61d2301, type: 3}
 --- !u!1 &1261295648
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,16 +876,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: d204c1fb57dae40ba92fc13ed2a354b4, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 737762277}
+        m_TargetAssemblyTypeName: CambiarEscena, Assembly-CSharp
+        m_MethodName: CambiarEscenaClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Creditos
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2054267345

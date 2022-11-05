@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: 47da71d14e356448d94bd3fc6d20d309
+    guid: ec1ee7d0b63d942de8eaf06459b3d679
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Perdida.unity
     guid: d1550fc2ea9124b8f9f42f321a01080a
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 2d8a71dbfebbc4a198f089c220cdb756
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 3e698804e99e54040af33dd1cecfdafa
   m_configObjects: {}
