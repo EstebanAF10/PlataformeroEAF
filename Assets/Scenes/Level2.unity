@@ -1424,7 +1424,7 @@ GameObject:
   - component: {fileID: 1823287062}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1442,8 +1442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 2
-  winSpot: {fileID: 1141168115}
-  player: {fileID: 780274135}
   checkPoints:
   - {fileID: 453595241}
   isFinal: 0
